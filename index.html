@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Sorteador PHP Conference 2019</title>
+    <meta name="description" content="Sorteador PHP Conference 2019">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/countdowntime/flipclock.css">
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <section class="congrats text-center">
+		<h1>
+			<span class="title"></span>
+			<span class="title"></span>
+		</h1>
+    </section>
+    <div class="bg-img1 size1 overlay1 p-t-24" style="background-image: url('images/conference.jpg');">
+        <div class="flex-w flex-sb-m p-l-80 p-r-74 p-b-175 respon5">
+            <div class="wrappic1 m-r-30 m-t-10 m-b-10">
+                <a href="#"><img src="images/logo.png" alt="Conferência PHPRS"></a>
+            </div>
+
+            <div class="flex-w m-t-10 m-b-10">
+                <a href="#" class="size3 flex-c-m how-social trans-04 m-r-6">
+                    <i class="fa fa-facebook"></i>
+                </a>
+
+                <a href="#" class="size3 flex-c-m how-social trans-04 m-r-6">
+                    <i class="fa fa-twitter"></i>
+                </a>
+
+                <a href="#" class="size3 flex-c-m how-social trans-04 m-r-6">
+                    <i class="fa fa-github"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="flex-w flex-sa p-r-0 respon1">
+            <div class="p-t-34 p-b-60 respon3">
+                <p class="l1-txt1 p-b-10 respon2">
+                    OFERECIMENTO PHPRS
+                </p>
+
+                <h3 class="l1-txt2 p-b-45 respon2 respon4" id='app'>
+					SORTEANDO...
+				</h3>
+
+                <div class="cd100"></div>
+
+            </div>
+
+            <div class="bg0 wsize1 bor1 p-l-45 p-r-45 p-t-50 p-b-18 p-lr-15-sm">
+                <h3 class="l1-txt3 txt-center">
+					Sorteados
+				</h3>
+                <div class="wait s1-txt3 txt-center p-l-15 p-r-15 p-t-25">Aguarde o contador =)</div>
+                <ul class="list s1-txt3 p-l-15 p-r-15 p-t-25">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/countdowntime/flipclock.min.js"></script>
+    <script src="vendor/countdowntime/moment.min.js"></script>
+    <script src="vendor/countdowntime/moment-timezone.min.js"></script>
+    <script src="vendor/countdowntime/moment-timezone-with-data.min.js"></script>
+    <script src="vendor/countdowntime/countdowntime.js"></script>
+    <script src="js/typewriter.js"></script>
+    <script>
+        $('.cd100').countdown100({
+            counterTimes: 1,
+            endtimeDate: 0,
+            endtimeHours: 0,
+            endtimeMinutes: 0,
+            endtimeSeconds: 5
+        });
+
+        var app = document.getElementById('app');
+
+        var typewriter = new Typewriter(app, {
+            loop: true
+        });
+
+        typewriter.typeString('Sorteando...')
+            .pauseFor(2500)
+            .deleteAll()
+            .typeString('Fique ligado!')
+            .pauseFor(2500)
+            .deleteAll()
+            .typeString('Conferência PHPRS')
+            .pauseFor(2500)
+            .deleteAll()
+            .typeString('Patrocínio SENAC RS')
+            .pauseFor(2500)
+            .deleteChars(8)
+            .typeString('Kinghost')
+            .pauseFor(2500)
+            .deleteChars(8)
+            .typeString('Datum TI')
+            .pauseFor(2500)
+            .deleteChars(8)
+            .typeString('Navalha Digital')
+            .pauseFor(2500)
+            .deleteChars(15)
+            .typeString('44Office')
+            .pauseFor(2500)
+            .start();
+    </script>
+	
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	
+	<script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+	</script>
+	
+    <script src="js/main.js"></script>
+</body>
+
+</html>
